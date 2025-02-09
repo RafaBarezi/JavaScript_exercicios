@@ -1,4 +1,4 @@
-let listaDeNumerosSorteados = []; // para criar lista vazia 
+let listaDeNumerosSorteados = []; 
 
 function exibirTextoNaTela(tag, texto) {
     document.querySelector(tag).innerHTML = texto;
@@ -12,7 +12,8 @@ function exibirMensagemInicial() {
 }
 
 function gerarNumeroAleatorio() {
-    let NumeroEscolhido = parseInt(Math.random() * 10) + 1;
+    let NumeroEscolhido = parseInt(Math.random() * 10) + 1; 
+    // Com o Math.randon, os n°s aleatórios gerados sempre são decimais entre 0 e 1, por isso multiplicar por 10.
     let quantidadeDeElementosNaLista = listaDeNumerosSorteados.length;
 
 if(quantidadeDeElementosNaLista == 10){
@@ -47,7 +48,7 @@ function verificarChute() {
             : (exibirTextoNaTela("p", chute > numeroSecreto ? "O número secreto é menor!" : "O número secreto é maior!"), tentativas++);
 
 
-    // habilita o botão reiniciar independentemente do resultado
+    // habilitando o botão reiniciar independentemente do resultado
     document.getElementById("reiniciar").removeAttribute("disabled");
     limparCampo();
 }
@@ -57,15 +58,15 @@ function reiniciarJogo() {
     tentativas = 1;
     limparCampo();
     exibirMensagemInicial();
-    // reabilita o botão de chutar caso tenha sido desabilitado
+    // reabilitando o botão de chutar caso tenha sido desabilitado
     document.getElementById("chutar").removeAttribute("disabled");
 }
 
-// inicializa o jogo
+// iniciando o jogo
 let numeroSecreto = gerarNumeroAleatorio();
 let tentativas = 1;
 exibirMensagemInicial();
 
-// associa os eventos aos botões após o carregamento do documento
+// associando os eventos aos botões após o carregamento do documento
 document.getElementById("chutar").addEventListener("click", verificarChute);
 document.getElementById("reiniciar").addEventListener("click", reiniciarJogo);

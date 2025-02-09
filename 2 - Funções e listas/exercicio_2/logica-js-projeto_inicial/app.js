@@ -1,4 +1,4 @@
-let numA = parseInt(prompt("Digite um número:"));
+let numA = parseInt(prompt("Por favor, digite um número:"));
 let numB = parseInt(prompt("Digite outro número:"));
 
 function MaiorNumero() {

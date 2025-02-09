@@ -1,6 +1,6 @@
 alert("Vamos testar seu IMC!");
-let peso = parseInt(prompt("Qual é o seu peso?"));
-let altura = parseInt(prompt("Qual é o sua altura?"));
+let peso = parseInt(prompt("Quanto você pesa?"));
+let altura = parseInt(prompt("Qual é a sua altura?"));
 
 function calculoIMC(altura, peso) {
     //

@@ -1,9 +1,9 @@
-let numDigitado = parseFloat(prompt("Por favor, digite um número"));
+alert("Vamos contar até 5:")
 
-if (numDigitado > 0) {
-    alert(`${numDigitado} é um número positivo`);
-} else if (numDigitado == 0) {
-    alert("Você digitou zero!");
-} else {
-    alert(`${numDigitado} é um número negativo`);
+let contador = 0; // Inicializa o contador com 1
+
+while (contador <= 4) {
+    console.log(contador); // Mostra o valor atual do contador
+    contador += 1; // Incrementa
+    alert(contador)
 }

@@ -1,7 +1,9 @@
-let diaSemana = prompt("Qual é o dia da semana é hoje?");
+let numDigitado = parseFloat(prompt("Por favor, digite um número"));
 
-if (diaSemana === "Domingo" || diaSemana === "Sábado" || diaSemana === "Sexta") {
-    alert("Bom final de semana!");
+if (numDigitado > 0) {
+    alert(`${numDigitado} é um número positivo`);
+} else if (numDigitado == 0) {
+    alert("Você digitou zero!");
 } else {
-    alert("Boa semana!");
+    alert(`${numDigitado} é um número negativo`);
 }
